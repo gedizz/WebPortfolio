@@ -91,7 +91,7 @@ const Recipes = [
   },
   {
     "name": "Buffalo Chicken Dip",
-    "description": "A creamy and spicy dip made with shredded chicken, buffalo sauce, and melted cheese, served with tortilla chips.",
+    "description": "A creamy and spicy dip made with shredded chicken, buffalo sauce, and melted cheese, served with chips.",
     "image": "19.jpg"
   },
   {

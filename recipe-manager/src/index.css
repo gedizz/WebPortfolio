@@ -1,5 +1,8 @@
-body {
-  margin: 0;
+/* Reset body and html height */
+html, body {
+  height: 100%; /* Ensure full height of the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,11 +10,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* For code blocks */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+/* Card image styling */
 .card-img {
   height: 200px; /* Set a fixed height */
   width: 100%; /* Ensure it spans the full width of the card */
@@ -19,13 +24,16 @@ code {
   border-radius: 8px; /* Optional: Add rounded corners */
 }
 
+/* Dark mode */
 .dark {
-  background-color: #2C2F33;
-  color: white;
+  background-color: #2C2F33; /* Dark background */
+  color: white; /* Light text for contrast */
+  min-height: 100vh; /* Ensure the dark background spans the viewport */
 }
 
+/* Light mode */
 .light {
-  background-color: white;
-  color: black;
+  background-color: white; /* Light background */
+  color: black; /* Dark text for contrast */
+  min-height: 100vh; /* Ensure the light background spans the viewport */
 }
-

@@ -1,10 +1,10 @@
-import Container from "react-bootstrap/esm/Container";
+import PageContainer from "./PageContainer";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function Homepage(props) {
   return (
-    <Container bg={props.colorMode} data-bs-theme={props.colorMode}>
+    <PageContainer colorMode={props.colorMode}>
       <Row>
         <Col>Column 1</Col>
         <Col>Column 2</Col>
@@ -15,7 +15,7 @@ function Homepage(props) {
         <Col>Column 2</Col>
         <Col>Column 3</Col>
       </Row>
-    </Container>
+    </PageContainer>
   );
 }
 

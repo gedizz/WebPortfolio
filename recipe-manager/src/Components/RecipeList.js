@@ -1,4 +1,4 @@
-import Container from "react-bootstrap/esm/Container";
+import PageContainer from './PageContainer';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -27,7 +27,7 @@ function RecipeList(props) {
   };
 
   return (
-    <Container className="justify-content-center mt-4"bg={props.colorMode} data-bs-theme={props.colorMode}>
+    <PageContainer colorMode={props.colorMode}>
       {groupedRecipes.map((row, rowIndex) => (
         <Row key={rowIndex} className="mb-4">
           {row.map((recipe, index) => (
@@ -35,7 +35,7 @@ function RecipeList(props) {
               <Card>
                 <Card.Img className="card-img" variant="top" src={`./assets/${recipe.image}`} />
                 <Card.Body>
-                  <Card.Title>{recipe.title}</Card.Title>
+                  <Card.Title>{recipe.name}</Card.Title>
                   <Card.Text>{recipe.description}</Card.Text>
                 </Card.Body>
               </Card>
@@ -76,7 +76,7 @@ function RecipeList(props) {
         />
       </Pagination>
 
-    </Container>
+    </PageContainer>
   );
 }
 

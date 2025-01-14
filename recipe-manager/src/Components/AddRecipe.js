@@ -1,10 +1,10 @@
-import Container from "react-bootstrap/esm/Container";
+import PageContainer from "./PageContainer";
 
 function AddRecipe(props) {
   return (
-    <Container bg={props.colorMode} data-bs-theme={props.colorMode}>
+    <PageContainer colorMode={props.colorMode}>
       <p>Add to recipe List</p>
-    </Container>
+    </PageContainer>
   );
 }
 
