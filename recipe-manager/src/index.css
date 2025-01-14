@@ -19,3 +19,13 @@ code {
   border-radius: 8px; /* Optional: Add rounded corners */
 }
 
+.dark {
+  background-color: #2C2F33;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+

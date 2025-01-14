@@ -22,7 +22,7 @@ function App() {
   const mode = isDarkMode ? 'dark' : 'light';
 
   return (
-    <div className="App">
+    <div className={mode}>
       <RouterNav colorMode={mode} darkModeHandler={toggleDarkMode}/>
       <Routes>
         <Route path="/" element={<Homepage colorMode={mode}/>}></Route>
