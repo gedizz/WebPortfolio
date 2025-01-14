@@ -19,13 +19,15 @@ function App() {
 
   }
 
+  const mode = isDarkMode ? 'dark' : 'light';
+
   return (
     <div className="App">
-      <RouterNav isDarkMode={isDarkMode} darkModeHandler={toggleDarkMode}/>
+      <RouterNav colorMode={mode} darkModeHandler={toggleDarkMode}/>
       <Routes>
-        <Route path="/" element={<Homepage />}></Route>
-        <Route path="/recipe-list" element={<RecipeList />}></Route>
-        <Route path="/add-recipe" element={<AddRecipe />}></Route>
+        <Route path="/" element={<Homepage colorMode={mode}/>}></Route>
+        <Route path="/recipe-list" element={<RecipeList colorMode={mode}/>}></Route>
+        <Route path="/add-recipe" element={<AddRecipe colorMode={mode}/>}></Route>
       </Routes>
     </div>
     

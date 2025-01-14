@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card-img {
+  height: 200px; /* Set a fixed height */
+  width: 100%; /* Ensure it spans the full width of the card */
+  object-fit: cover; /* Ensure the image fits well without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
