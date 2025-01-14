@@ -6,12 +6,22 @@ import {Routes, Route} from 'react-router-dom';
 import Homepage from './Components/Homepage.js';
 import RecipeList from './Components/RecipeList.js';
 import AddRecipe from './Components/AddRecipe.js';
+import { useState } from 'react';
 
 
 function App() {
+
+  // Prop drilling for dark-light mode
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+
+  }
+
   return (
     <div className="App">
-      <RouterNav />
+      <RouterNav isDarkMode={isDarkMode} darkModeHandler={toggleDarkMode}/>
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
         <Route path="/recipe-list" element={<RecipeList />}></Route>

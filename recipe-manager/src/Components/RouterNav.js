@@ -3,20 +3,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
+
 
 // bg="dark" data-bs-theme="dark"
-function RouterNav() {
+function RouterNav(props) {
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-
-    console.log("Dark mode value=" + isDarkMode);
-  }
-
-  const colorMode = isDarkMode ? "dark" : "light";
+  const colorMode = props.isDarkMode ? "dark" : "light";
 
 
   return (
@@ -38,7 +30,7 @@ function RouterNav() {
             </Nav.Item>
           </Nav>
           <Form inline="true">
-            <Form.Check type="switch" id="dark-switch" label="Dark Mode" onClick={toggleDarkMode}/>
+            <Form.Check style={{color: props.isDarkMode ? "white" : "black"}}type="switch" id="dark-switch" label="Dark Mode" onClick={props.darkModeHandler}/>
           </Form>
         </Navbar.Collapse>
         
