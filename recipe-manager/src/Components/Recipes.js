@@ -16,7 +16,7 @@ const Recipes = [
   },
   {
     "name": "Beef Wellington",
-    "description": "A luxurious dish featuring a beef tenderloin coated with pâté and duxelles, wrapped in puff pastry, and baked.",
+    "description": "A luxurious dish featuring a beef tenderloin coated with pâté and duxelles, wrapped in puff pastry.",
     "image": "4.jpg"
   },
   {
