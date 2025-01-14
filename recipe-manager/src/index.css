@@ -24,6 +24,21 @@ code {
   border-radius: 8px; /* Optional: Add rounded corners */
 }
 
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition-duration: 500ms;
+}
+
+.card-dark:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.card-light:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  
+}
+
 /* Dark mode */
 .dark {
   background-color: #2C2F33; /* Dark background */
@@ -37,3 +52,4 @@ code {
   color: black; /* Dark text for contrast */
   min-height: 100vh; /* Ensure the light background spans the viewport */
 }
+

@@ -32,7 +32,7 @@ function RecipeList(props) {
         <Row key={rowIndex} className="mb-4">
           {row.map((recipe, index) => (
             <Col key={index} md={4}>
-              <Card>
+              <Card className={`card card-${props.colorMode}`}>
                 <Card.Img className="card-img" variant="top" src={`./assets/${recipe.image}`} />
                 <Card.Body>
                   <Card.Title>{recipe.name}</Card.Title>
