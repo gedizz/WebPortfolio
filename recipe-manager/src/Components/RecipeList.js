@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import Recipes from "./Recipes";
 import Pagination from 'react-bootstrap/Pagination';
 import { useState } from "react";
+import RecipeInfo from './RecipeInfo';
 
 function RecipeList(props) {
   const itemsPerPage = 9;
@@ -26,13 +27,28 @@ function RecipeList(props) {
     setCurrentPage(pageNumber);
   };
 
+  {/* Show an offcanvas when you click a recipe */}
+  const [showRecipe, setShowRecipe] = useState(false);
+  const [currentRecipe, setCurrentRecipe] = useState(null)
+  const hideRecipe = () => setShowRecipe(false); useState(null);
+
+  const onRecipeClick = (recipe) => {
+    setCurrentRecipe(recipe);
+    setShowRecipe(true);
+  }
+
+  
+ 
   return (
     <PageContainer colorMode={props.colorMode}>
+      
+      <RecipeInfo colorMode={props.colorMode} show={showRecipe} hide={hideRecipe} recipe={currentRecipe} />
+
       {groupedRecipes.map((row, rowIndex) => (
         <Row key={rowIndex} className="mb-4">
           {row.map((recipe, index) => (
             <Col key={index} md={4}>
-              <Card className={`card card-${props.colorMode}`}>
+              <Card className={`card card-${props.colorMode}`} onClick={ () => onRecipeClick(recipe) }>
                 <Card.Img className="card-img" variant="top" src={`./assets/${recipe.image}`} />
                 <Card.Body>
                   <Card.Title>{recipe.name}</Card.Title>
